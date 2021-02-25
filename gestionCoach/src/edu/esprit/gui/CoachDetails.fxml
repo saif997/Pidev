@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="edu.esprit.gui.CoachDetailsController">
+   <children>
+      <Label layoutX="128.0" layoutY="99.0" text="Nom de Coach">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#227a27" />
+                  <Stop color="#227a27" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="128.0" layoutY="157.0" text="Prenom de Coach">
+         <textFill>
+            <RadialGradient centerX="0.5388888888888889" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#227a27" />
+                  <Stop color="#227a27" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="128.0" layoutY="221.0" text="Genre">
+         <textFill>
+            <RadialGradient centerX="0.5388888888888889" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#227a27" />
+                  <Stop color="#227a27" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="128.0" layoutY="283.0" text="Disponabilité">
+         <textFill>
+            <RadialGradient centerX="0.5388888888888889" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#227a27" />
+                  <Stop color="#227a27" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="128.0" layoutY="348.0" text="type de sport ">
+         <textFill>
+            <RadialGradient centerX="0.5388888888888889" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#227a27" />
+                  <Stop color="#227a27" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="128.0" layoutY="407.0" text="localisation">
+         <textFill>
+            <RadialGradient centerX="0.5388888888888889" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#227a27" />
+                  <Stop color="#227a27" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="contnom" editable="false" layoutX="265.0" layoutY="95.0" />
+      <TextField fx:id="contprenom" editable="false" layoutX="265.0" layoutY="153.0" />
+      <TextField fx:id="contgenre" editable="false" layoutX="265.0" layoutY="217.0" />
+      <TextField fx:id="contdisponabilité" editable="false" layoutX="265.0" layoutY="279.0" />
+      <TextField fx:id="conttype" editable="false" layoutX="265.0" layoutY="344.0" />
+      <TextField fx:id="contlocalisation" editable="false" layoutX="265.0" layoutY="403.0" />
+   </children>
+</AnchorPane>
