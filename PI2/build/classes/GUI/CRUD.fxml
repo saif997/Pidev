@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: #222831;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.CRUDController">
+   <children>
+      <AnchorPane fx:id="rootPane" prefHeight="900.0" prefWidth="500.0" style="-fx-background-color: #222831;">
+         <children>
+            <Button fx:id="add" layoutX="215.0" layoutY="743.0" mnemonicParsing="false" onAction="#Add_gym" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #29a19c;" text="Add" />
+            <Button fx:id="update" layoutX="25.0" layoutY="129.0" mnemonicParsing="false" onAction="#Edite" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #29a19c;" text="UpDate" />
+            <Button fx:id="delete" layoutX="260.0" layoutY="129.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #29a19c;" text="Delete" />
+            <Label layoutX="25.0" layoutY="75.0" text="ID" textFill="#a3f7bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_id" layoutX="135.0" layoutY="70.0" onKeyReleased="#VerifID" prefHeight="31.0" prefWidth="83.0" promptText="ID Gym" style="-fx-background-color: #393e46;" />
+            <Label layoutX="25.0" layoutY="315.0" text="Localisation" textFill="#a3f7bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_local" layoutX="135.0" layoutY="310.0" prefHeight="31.0" prefWidth="325.0" promptText="localisation exacte de gym" style="-fx-background-color: #393e46;" />
+            <Label layoutX="280.0" layoutY="407.0" text="Membre" textFill="#a3f7bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_membre" layoutX="376.0" layoutY="402.0" prefHeight="31.0" prefWidth="83.0" promptText="membre" style="-fx-background-color: #393e46;" />
+            <TextField fx:id="txt_capacite" layoutX="141.0" layoutY="402.0" prefHeight="31.0" prefWidth="83.0" promptText="capacite max" style="-fx-background-color: #393e46;" />
+            <Label layoutX="25.0" layoutY="407.0" text="Capacite" textFill="#a3f7bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="498.0" text="Coach" textFill="#a3f7bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_coach" layoutX="141.0" layoutY="493.0" prefHeight="31.0" prefWidth="83.0" promptText="coach" style="-fx-background-color: #393e46;" />
+            <TextField fx:id="txt_admin" layoutX="135.0" layoutY="586.0" prefHeight="31.0" prefWidth="325.0" promptText="nom et prenom de l'administrateur" style="-fx-background-color: #393e46;" />
+            <Label layoutX="25.0" layoutY="591.0" text="Nom Admin" textFill="#a3f7bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_rong" layoutX="141.0" layoutY="675.0" prefHeight="31.0" prefWidth="83.0" promptText="rong" style="-fx-background-color: #393e46;" />
+            <Label layoutX="25.0" layoutY="680.0" text="Rong" textFill="#a3f7bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="229.0" text="Nom" textFill="#a3f7bf">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_nom" layoutX="135.0" layoutY="224.0" prefHeight="31.0" prefWidth="325.0" promptText="Nom de gym" style="-fx-background-color: #393e46;" />
+            <Button fx:id="add1" layoutX="419.0" layoutY="743.0" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="38.0" style="-fx-background-color: #29a19c;" text="⟳" />
+            <Label fx:id="namelabel" layoutX="135.0" layoutY="255.0" prefHeight="21.0" prefWidth="325.0" textFill="#f80505" />
+            <Label fx:id="localLabel" layoutX="135.0" layoutY="341.0" prefHeight="21.0" prefWidth="325.0" textFill="#ff0101" />
+            <Label fx:id="capaciteLabel" layoutX="116.0" layoutY="440.0" prefHeight="21.0" prefWidth="121.0" textFill="#f20404" />
+            <Label fx:id="membreLabel" layoutX="340.0" layoutY="440.0" prefHeight="21.0" prefWidth="121.0" textFill="#f20404" />
+            <Label fx:id="coachLabel" layoutX="68.0" layoutY="525.0" prefHeight="21.0" prefWidth="156.0" textFill="#f20404" />
+            <Label fx:id="adminlabel" layoutX="135.0" layoutY="617.0" prefHeight="21.0" prefWidth="325.0" textFill="#f80505" />
+            <Label fx:id="rongLabel" layoutX="232.0" layoutY="680.0" prefHeight="21.0" prefWidth="156.0" textFill="#f20404" />
+            <Label fx:id="idLabel" layoutX="227.0" layoutY="75.0" prefHeight="21.0" prefWidth="142.0" textFill="#f80606" />
+            <ImageView fx:id="logoView" fitHeight="78.0" fitWidth="72.0" layoutX="30.0" layoutY="798.0" onMouseEntered="#handleButtonaction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/work/app%20logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="table" editable="true" layoutX="500.0" layoutY="68.0" prefHeight="801.0" prefWidth="660.0" style="-fx-background-color: #a3f7bf;" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="68.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="local" prefWidth="173.0" text="Local" />
+            <TableColumn fx:id="nom" prefWidth="117.0" text="Nom" />
+            <TableColumn fx:id="capacite" prefWidth="75.0" text="Capacite" />
+            <TableColumn fx:id="membre" prefWidth="70.0" text="Membre" />
+            <TableColumn fx:id="coach" prefWidth="56.0" text="Coach" />
+            <TableColumn fx:id="admin" prefWidth="71.0" text="Admin" />
+            <TableColumn fx:id="rong" prefWidth="56.0" text="Rong" />
+        </columns>
+      </TableView>
+      <Label layoutX="505.0" layoutY="21.0" prefHeight="21.0" prefWidth="61.0" text="Search" textFill="#a3f7bf">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="filterField" layoutX="694.0" layoutY="16.0" onAction="#search_Gym" prefHeight="31.0" prefWidth="461.0" style="-fx-background-color: #393e46;" />
+      <ImageView fx:id="searchView" fitHeight="31.0" fitWidth="24.0" layoutX="663.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/search.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
