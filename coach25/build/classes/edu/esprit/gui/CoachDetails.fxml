@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-color: #33C4FF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.gui.CoachDetailsController">
+   <children>
+      <Label layoutX="51.0" layoutY="124.0" textFill="#ff0404" />
+      <TableView fx:id="colcoach" layoutX="309.0" layoutY="60.0" onMouseClicked="#handelmouseaction" prefHeight="394.0" prefWidth="899.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="89.0" text="ID" />
+          <TableColumn fx:id="colnom" prefWidth="93.0" text="Nom" />
+            <TableColumn fx:id="colprenom" prefWidth="149.0" text="prenom" />
+            <TableColumn fx:id="colgenre" prefWidth="112.0" text="Genre" />
+            <TableColumn fx:id="coldisponabilité" prefWidth="160.0" text="Disponibilité" />
+            <TableColumn fx:id="coltype" prefWidth="159.0" text="Type de sport" />
+            <TableColumn fx:id="collocalisation" prefWidth="136.0" text="Localisation" />
+        </columns>
+      </TableView>
+      <Label contentDisplay="RIGHT" layoutX="484.0" layoutY="20.0" text="Informations des coachs" textAlignment="RIGHT">
+         <font>
+            <Font name="Arial Bold Italic" size="29.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#58f505" />
+                  <Stop color="#58f505" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="idsupprimer" layoutX="173.0" layoutY="415.0" mnemonicParsing="false" onAction="#supprimercoach" text="Supprimer">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ee0909" />
+                  <Stop color="#ee0909" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Button fx:id="bref" layoutX="510.0" layoutY="507.0" mnemonicParsing="false" onAction="#Actualiserpage" text="Actualiser">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ee0909" />
+                  <Stop color="#ee0909" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Button fx:id="idretour" layoutY="550.0" mnemonicParsing="false" onAction="#retourner" text="Retour">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#1502e1" />
+                  <Stop color="#1502e1" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Button layoutX="1242.0" layoutY="550.0" mnemonicParsing="false" onAction="#updatedelete" text="Update">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#1502e1" />
+                  <Stop color="#1502e1" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Button>
+      <Label layoutX="38.0" layoutY="74.0" text="ID" />
+      <Label layoutX="37.0" layoutY="124.0" text="Nom" />
+      <Label layoutX="37.0" layoutY="168.0" text="Prenom" />
+      <Label layoutX="38.0" layoutY="222.0" text="Genre" />
+      <Label layoutX="38.0" layoutY="271.0" text="Disponibilité" />
+      <Label layoutX="38.0" layoutY="318.0" text="Type de sport" />
+      <Label layoutX="38.0" layoutY="362.0" text="Localisation" />
+      <TextField fx:id="ftid" layoutX="145.0" layoutY="70.0" />
+      <TextField fx:id="ftnom" layoutX="145.0" layoutY="120.0" />
+      <TextField fx:id="ftprenom" layoutX="145.0" layoutY="173.0" />
+      <TextField fx:id="ftgenre" layoutX="145.0" layoutY="218.0" />
+      <TextField fx:id="ftdisponibilité" layoutX="145.0" layoutY="267.0" />
+      <TextField fx:id="fttype" layoutX="145.0" layoutY="314.0" />
+      <TextField fx:id="ftlocalisation" layoutX="145.0" layoutY="358.0" />
+      <Button fx:id="ftmodifier" layoutX="101.0" layoutY="415.0" mnemonicParsing="false" onAction="#modifiercoach" text="Modifier">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#e10707" />
+                  <Stop color="#e10707" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Button>
+   </children>
+</AnchorPane>
